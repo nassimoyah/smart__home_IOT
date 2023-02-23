@@ -12,7 +12,7 @@ int distance;
 int GAZ_val ;
 // You should get Auth Token in the Blynk App.
 
-char auth[] = "get the auth code from blynk platfor "; 
+char auth[] = "get the auth code from blynk platforM "; 
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
