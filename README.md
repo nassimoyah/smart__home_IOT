@@ -20,7 +20,7 @@ I prefered manually over auto because somtimes it waste of power when your not c
 
 HOW IT WORKS ?
 
-first you nedd to have acces to internet in bith  your home and your phone .
+first you nedd to have acces to internet in bOth  your home and your phone .
 connect the esp8266/32 to your house's internet using the code ( make sure to provide your "SSID" , "PASSWORD" )
    USING blynk library in the code esp will automatically connect to the blynk's cloud as a client after providng
    THE3 "AUTH"  in the code . 
