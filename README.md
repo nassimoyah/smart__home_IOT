@@ -4,7 +4,7 @@ This project solved a lot of daily life problems , it is about controlling and m
 ? MOBILE APPLICATION 
 
 
-it inludes :  (bon for now kayan bzzf  swalah manach dayrinhom fel code   ta9adro tzidohom easyy ) 
+it inludes :  (bon for now kayan bzzf  swalah manach dayrinhom fel code   ta9adro tzidohom easyy )  /// MAKE SURE TO CREAT BLYNK ACCOUNT
 
 1/ READING YOUR DATA OF YOUR AIR QUALITY's house , and running an alaert in case of any unusual air( smoke , gaz ,), in this case , the windows will be opened and , and air filtring systems will be lunched   the DATA WILL DISPLAYED ON YOUR PHONE (app) 
 
