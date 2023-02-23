@@ -1,4 +1,5 @@
 
+
 #define BLYNK_PRINT Serial
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
@@ -8,18 +9,18 @@
 
 long duration;
 int distance;
-int pot_val ;
+int GAZ_val ;
 // You should get Auth Token in the Blynk App.
 
-char auth[] = "0oqPUuQw20TzK-j02IWac5QJtfcYESRx"; 
+char auth[] = "get the auth code from blynk platfor "; 
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "AndroidAP1053";
-char pass[] = "enah9098";
+char ssid[] = "your SSID ";
+char pass[] = "PASSWORD ";
 
 BlynkTimer timer;
-WidgetLCD lcd(V0);
+
 void setup()
 {
   // Debug console
@@ -34,10 +35,10 @@ void setup()
 
 void loop()
 {
-  Blynk.run();
+  Blynk.run();  // RUN BLYNK EVENT
   timer.run();
 }
-void sendSensor()
+void FUNCTIONS()
 {
   digitalWrite(trig, LOW);   // Makes trigPin low
   delayMicroseconds(2);       // 2 micro second delay
@@ -51,13 +52,15 @@ void sendSensor()
 
   Serial.print("Distance = ");        //Output distance on arduino serial monitor
   Serial.println(distance);
+  distance = map(distance,0,10,100,0) ;
+  Blynk.virtualWrite(V1, distance); /// SEND DATA TO THE CLOUD 
+  
 
-  Blynk.virtualWrite(V1, distance);
-  pot_val = analogRead(A0) ;
-  Blynk.virtualWrite(V2, pot_val);
-  lcd.print(0, 0, "voidloopRobotech"); // use: (position X: 0-15, position Y: 0-1, "Message you want to print")
-  lcd.print(0, 1, "Distance: " + String(distance) + "cm  ");
-  delay(1000); 
+  
+  
+  GAZ_val = analogRead(A0) ;
+ 
+  Blynk.virtualWrite(V2, GAZ_val); /// SEND GAZ DATA 
+ 
 
 }
-
